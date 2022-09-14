@@ -4,10 +4,67 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Orkut Post Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+
+    <header>
+      <img src="./public/assets/Rectangle 20.svg" alt="icon orkut">
+
+      <div class="creator">
+        <h3 draggable="true">Criado por Kauã Muniz</h3>
+        
+        <a href="https://www.linkedin.com/in/kauamunizz/">
+          <img src="./public/assets/linkedin-icon.svg" alt="icon linkedin">
+        </a>
+
+        <a href="https://github.com/kauamunizz">
+          <img src="./public/assets/github-icon.svg" alt="icon Github">
+        </a>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="esquerdo">
+        <h2>Criar comunidade</h2>
+        <p> <span>Início</span>  > <span>Comunidades</span>  > Criar comunidade</p>
+
+        <form>
+          <label> Foto da comunidade
+            <input type="text" placeholder="Selecione uma imagem">
+          </label>
+
+          <label> Autor
+            <input type="text" placeholder="Qual o @ do autor?">
+          </label>
+
+          <label> Título da comunidade
+            <input type="text" placeholder="Como vamos chamar sua comunidade?">
+          </label>
+
+          <label> Descrição
+            <textarea name="" id="" cols="50" rows="7" placeholder="Digite uma descrição"></textarea>
+          </label>
+
+          <button>Baixar</button>
+        </form>
+      </div>
+
+      <div class="direito">
+        <img src="./public/assets/Post-template.png" alt="">
+      </div>
+    </div>
+
+
+      
+
+
+
+    <script type="module" src="./src/scripts/index.js"></script>
   </body>
+
 </html>
