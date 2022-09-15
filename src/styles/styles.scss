@@ -44,13 +44,14 @@ body {
     }
     .main {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
         margin: 60px 70px 64px 86px;
 
         .esquerdo {
             width: 330px;
             height: 505px;
+            margin-right: 54px;
             background: #FFFFFF;
             box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
             border-radius: 7px;
@@ -81,7 +82,7 @@ body {
                     color: #4E999C;
 
                     * {
-                        border: 2px solid #848484;
+                        border: 1px solid #848484;
                         border-radius: 4px;
                         padding: 5px 0 5px 10px;
 
@@ -90,14 +91,44 @@ body {
                             font-size: 12px;
                             opacity: .9;
                         }
+                        &:focus {
+                            outline: transparent;
+                        }
+                    }
+                    input {
+                        height: 20px;
                     }
                     textarea {
                         resize: none;
                     }
 
                 }
+                
+                .input-file {
+                    display: flex;
+                    
+                    .input-group {
+                        display: flex;
+                        border: 2px solid #89B1D6;
+                        padding: 0;
+                        input {
+                            border: none;
+                            width: 60%;
+                            cursor: pointer;
+                        }
+                        button {
+                            color: #fff;
+                            border-radius: 0 2px 2px 0;
+                            background: #649DD5;
+                            padding: 0;
+                            cursor: pointer;
+                            border: none;
+                            width: 40%;
+                        }
+                    }
+                }
 
-                button {
+                .submit {
                     font-weight: 700;
                     margin-top: 40px;
                     padding: 10px 0;
@@ -107,6 +138,7 @@ body {
                     line-height: 21px;
                     color: #fff;
                     border: none;
+                    cursor: pointer;
                 }
             }
         }
@@ -115,15 +147,55 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 476px;
-            height: 411px;
+            width: 550px;
+            height: 455px;
+            padding: 15px;
             background: #FFFFFF;
             box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
             border-radius: 7px;
+            position: relative;
 
             img {
-                width: 447px;
-                height: 379.95px;
+                width: 100%;
+                height: 100%;
+            }
+            span{
+                position: absolute;
+                font-size: 13px;
+            }
+            .newImage {
+                top: 52px;
+                left: 19px;
+
+                img {
+                    width: 100px;
+                    height: 97px;
+                }
+            }
+            .autor {
+                top: 385px;
+                left: 265px;
+                width: 260px;
+            }
+            .titulo {
+                color: #4E999C;
+                top: 150px;
+                left: 20px;
+                width: 100px;
+                overflow-wrap: break-word;
+            }
+            .tituloMaior {
+                top: 55px;
+                left: 140px;
+                font-size: 15.6842px;
+                line-height: 13px;
+            }
+            .descricao {
+                top: 100px;
+                left: 260px;
+                width: 270px;
+                height: 240px;
+                overflow-wrap: break-word;
             }
         }
     }

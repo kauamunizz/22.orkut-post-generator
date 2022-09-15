@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -33,29 +33,38 @@
         <h2>Criar comunidade</h2>
         <p> <span>Início</span>  > <span>Comunidades</span>  > Criar comunidade</p>
 
-        <form>
-          <label> Foto da comunidade
-            <input type="text" placeholder="Selecione uma imagem">
+        <form name="createForm">
+          <label class="input-file"> Foto da comunidade
+            <div class="input-group">
+              <input name="image" type="text" placeholder="Selecione uma imagem" readonly>
+              <button type="button">selecionar</button>
+            </div>
           </label>
 
           <label> Autor
-            <input type="text" placeholder="Qual o @ do autor?">
+            <input name="autor" type="text" placeholder="Qual o @ do autor?" maxlength="25" minlength="4" required>
           </label>
 
           <label> Título da comunidade
-            <input type="text" placeholder="Como vamos chamar sua comunidade?">
+            <input name="titulo" type="text" placeholder="Como vamos chamar sua comunidade?" maxlength="25" minlength="10" required>
           </label>
 
           <label> Descrição
-            <textarea name="" id="" cols="50" rows="7" placeholder="Digite uma descrição"></textarea>
+            <textarea name="descricao" cols="50" rows="7" placeholder="Digite uma descrição" maxlength="540" required></textarea>
           </label>
 
-          <button>Baixar</button>
+          <button class="submit">Baixar</button>
         </form>
       </div>
 
       <div class="direito">
         <img src="./public/assets/Post-template.png" alt="">
+
+        <span class="newImage"></span>
+        <span class="autor"></span>
+        <span class="titulo"></span>
+        <span class="tituloMaior"></span>
+        <span class="descricao"></span>
       </div>
     </div>
 
