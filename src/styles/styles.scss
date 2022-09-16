@@ -25,6 +25,7 @@ body {
             
             a {
                 display: flex;
+                transition: transform .5s;
 
                 img {
                     cursor: pointer;
@@ -38,6 +39,7 @@ body {
 
                 &:hover {
                     transform: scale(1.1);
+                    transition: transform .5s;
                 }
             }
         }
@@ -164,13 +166,14 @@ body {
                 font-size: 13px;
             }
             .newImage {
+                position: absolute;
                 top: 52px;
                 left: 19px;
-
-                img {
-                    width: 100px;
-                    height: 97px;
-                }
+                width: 100px;
+                height: 97px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
             }
             .autor {
                 top: 385px;
@@ -220,10 +223,11 @@ body {
                 .newImage {
                     top: 33px;
                     left: 13px;
-                    img {
-                        width: 61px;
-                        height: 61px;
-                    }
+                    width: 61px;
+                    height: 61px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
                 }
                 .autor {
                     top: 239px;

@@ -7,12 +7,11 @@ const index = (() => {
 
     async function download() {
         const { titulo } = document.forms.createForm;
-
         const preview = document.querySelector('.direito');
         const canvas = await html2canvas(preview);
         const dataImg = canvas.toDataURL('image/png');
-
         const downloadLink = document.createElement('a');
+
         downloadLink.download = titulo.value;
         downloadLink.href = dataImg;
         downloadLink.click();
@@ -20,16 +19,18 @@ const index = (() => {
 
     function handleOpenDialog() {
         const dialog = document.createElement('input');
+        
         dialog.type = 'file';
         dialog.accept = 'image/*';
         dialog.click();
-    
+        
         dialog.onchange = () => {
-            const image = dialog.files[0];
-            const img = new Image();
-            img.src = URL.createObjectURL(image);
+            const { imageName } = document.forms.createForm;
+            const img = dialog.files[0];
+            const divImage = document.querySelector('#newImage');
             
-            document.querySelector('.newImage').prepend(img);
+            imageName.value = img.name;
+            divImage.style.backgroundImage = `url(${URL.createObjectURL(img)})`;
         }
     }
 
