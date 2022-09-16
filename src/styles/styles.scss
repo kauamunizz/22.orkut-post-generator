@@ -199,4 +199,55 @@ body {
             }
         }
     }
+    @media (max-width: 1200px) {
+        header {
+            .creator {
+                display: none;
+            }
+        }
+        .main {
+            margin: 30px 7.5px 35px;
+            flex-direction: column;
+
+            .esquerdo {
+                margin: 0 0 47px;
+            }
+            .direito {
+                padding: 10px;
+                width: 340px;
+                height: 284px;
+
+                .newImage {
+                    top: 33px;
+                    left: 13px;
+                    img {
+                        width: 61px;
+                        height: 61px;
+                    }
+                }
+                .autor {
+                    top: 239px;
+                    left: 164px;
+                    font-size: 10px;
+                    width: 170px;
+                }
+                .titulo {
+                    top: 90px;
+                    left: 14px;
+                    width: 60px;                
+                }
+                .tituloMaior {
+                    top: 33px;
+                    left: 90px;
+                }
+                .descricao {
+                    top: 60px;
+                    left: 155px;
+                    width: 180px;
+                    height: 150px;
+                }
+            }
+        }
+    
+    }
 }

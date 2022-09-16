@@ -33,6 +33,15 @@ const index = (() => {
         }
     }
 
+    if (screen.availWidth < 1200 ) {
+        const textarea = document.querySelector('textarea');
+        textarea.maxLength = '240';
+
+        if (textarea.length > 240) {
+            textarea.value = textarea.value.slice(0,240);
+        }
+    }
+
     function events() {
 
         document.querySelector('.submit').addEventListener('click', event => {
