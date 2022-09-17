@@ -43,29 +43,7 @@ const index = (() => {
         }
     }
 
-    // function addMenu() {
-    //     document.querySelector('.main').insertAdjacentHTML('beforeend', /* html */ `
-    //         <div class="creator">
-    //             <h3 draggable="true">Criado por Kauã Muniz</h3>
-                
-    //             <a href="https://www.linkedin.com/in/kauamunizz/">
-    //                 <img src="./public/assets/linkedin-icon.svg" alt="icon linkedin">
-    //             </a>
-
-    //             <a href="https://github.com/kauamunizz">
-    //                 <img src="./public/assets/github-icon.svg" alt="icon Github">
-    //             </a>
-    //         </div>
-    //     `);
-    // }
-
     function events() {
-
-        document.querySelector('.menu-icon').addEventListener('click', () => {
-            document.querySelector('.main').style.display = 'none';
-            document.querySelector('.menu-info').style.display = 'flex';
-        });
-
         document.querySelector('.submit').addEventListener('click', event => {
             event.preventDefault();
             download();
